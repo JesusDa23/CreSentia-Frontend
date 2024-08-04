@@ -1,10 +1,9 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-
-/* body {
+.body {
     background-image: linear-gradient(to bottom, #FFEDED, #FFFFFF);
     background-size: cover;
     background-attachment: fixed; 
-  } */
+  }
+
+.caja {
+    box-shadow: #FFFFFF;
+}

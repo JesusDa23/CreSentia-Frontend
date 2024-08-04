@@ -1,0 +1,5 @@
+.home {
+  background-image: linear-gradient(to bottom, #FFEDED, #FFFFFF);
+  background-size: cover;
+  background-attachment: fixed; 
+}

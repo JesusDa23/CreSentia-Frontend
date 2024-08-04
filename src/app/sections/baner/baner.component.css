@@ -1,0 +1,144 @@
+.title {
+    text-align: center;
+    padding-top: 1.5em;
+  }
+
+  h1 {
+    font-size: 2.3em;
+    color: #000;
+    font-weight: 700;
+  }
+
+  h2 {
+    color: #D1335D;
+    font-weight: 700;
+    font-size: 1.3em;
+  }
+
+  .cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 2em;
+    gap: 2em;
+  }
+
+  .card {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: white;
+    border: 1px solid #E5E7EB;
+    border-radius: 1rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06);
+    padding: 1rem;
+    transition: background-color 0.3s;
+    width: 100%;
+    max-width: 450px;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    margin-left: 1em;
+    text-align: center;
+  }
+
+  .card:hover {
+    background-color: #F3F4F6;
+  }
+
+  .card img {
+    border-radius: 50%;
+    height: 170px;
+    width: 400px;
+    object-fit: cover;
+    background-color: #F3F4F6;
+  }
+
+  .card h5 {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #1F2937;
+  }
+
+  .card p {
+    font-size: .9em; /* Tamaño de fuente adecuado para la legibilidad */
+    color: #000; /* Color de texto ligeramente gris para suavizar la lectura */
+    margin: 0.5rem 0; /* Espaciado arriba y abajo del párrafo */
+    text-align: center; /* Centra el texto dentro del contenedor */
+  }  
+
+  .card button {
+    width: 100px; /* Ancho fijo para todos los botones */
+    height: 40px;
+    color: white;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+  }
+  
+  
+/* Fondo degradado para la primera tarjeta */
+.card:first-child {
+    background: linear-gradient(180deg, #14BFAB 0%, #E9F7F5 100%);
+  }
+  
+  /* Fondo degradado para la segunda tarjeta */
+  .card:nth-child(2) {
+    background: linear-gradient(180deg, #ACF35C 0%, #E9F7F5 100%);
+  }
+  
+  /* Fondo degradado para la tercera tarjeta */
+  .card:nth-child(3) {
+    background: linear-gradient(180deg, #FF8B94 0%, #E9F7F5 100%);
+  }
+
+/* Estilos para pantallas de 368px a 768px */
+@media(max-width: 568px) {
+
+  h1 {
+    font-size: 1.5em;}
+
+  h2 {
+    font-size: 1.1em;
+  }
+
+  .cards {
+    gap: 1.5em; /* Ajusta el espacio entre las tarjetas */
+  }
+
+  .card {
+    max-width: 90%;
+    flex-direction: column; /* Cambia a columna para pantallas medianas */
+    align-items: center;
+    padding: 1rem; /* Añade un poco de espacio interior */
+  }
+
+  .card img {
+    height: 150px; /* Ajusta el tamaño de la imagen */
+    width: 150px; /* Mantiene la proporción de la imagen */
+  }
+  
+  .card h5 {
+    font-size: 1.3rem; /* Ajusta el tamaño del título */
+  }
+
+  .card p {
+    font-size: 0.9em; /* Ajusta el tamaño de la fuente del párrafo */
+  }
+  
+  .card button {
+    width: 90px; /* Reduce el ancho del botón */
+    height: 35px; /* Ajusta la altura del botón */
+    font-size: 0.9em; /* Ajusta el tamaño de la fuente del botón */
+  }
+}
