@@ -1,0 +1,33 @@
+.welcome{
+  height: 70vh;
+    background-image: linear-gradient(to bottom, #FFEDED, #FFFFFF);
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.regresar{
+  border 2px solid
+  border-color: black;
+}
+
+.btn-container{´
+  padding-top: 30px;
+  padding-left:80px ;
+}
+
+.btn-empezar{
+  background-color: #ED878F;
+  border: none;
+  cursor:pointer ;
+}
+
+.outer {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 90px;
+}
+
+.inner {
+    text-align: center;
+}
