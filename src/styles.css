@@ -2,9 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-
-/* body {
-    background-image: linear-gradient(to bottom, #FFEDED, #FFFFFF);
-    background-size: cover;
-    background-attachment: fixed; 
-  } */
+@font-face {
+  font-family: 'Poppins-Regular';
+  font-size: normal;
+  font-weight: normal;
+  src: local('Poppins-Regular') url('./assets/fonts/Poppins/Poppins-Regular.ttf');
+}

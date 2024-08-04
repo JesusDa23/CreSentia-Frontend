@@ -10,7 +10,12 @@ module.exports = {
         'blue-hover': '#3A9C8F',
         'green': '#163D32',
         'green-hover': '#1E523E'
-        }
+        },
+
+      fontFamily: {
+        'Ponpis': ['Poppins-Regular']
+      }
+
 
     },
   },
