@@ -3,9 +3,8 @@
     height: 70vh;
     margin: 0;
     overflow: hidden;
-    background-image: linear-gradient(to bottom right, #FFEDED, #FFFFFF); /* Gradiente diagonal para más dinamismo */
-    background-size: cover;
-    background-attachment: fixed; 
+    background: rgb(255,255,255);
+    background: linear-gradient(0deg, rgba(255,255,255,1) 14%, rgba(237,135,143,0.4730684510132178) 100%);
     display: flex;
     align-items: center;
     justify-content: center;

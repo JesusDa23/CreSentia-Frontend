@@ -1,4 +1,4 @@
-<div class="min-h-screen flex items-center justify-center bg-gray-100">
+<div class="user flex items-center justify-center bg-gray-100">
   <div class="bg-white p-6 rounded-lg shadow-md w-full max-w-sm">
     <button class="mb-4 text-gray-500 hover:text-gray-800" (click)="goBack()">
       <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 inline-block" fill="none" viewBox="0 0 24 24"
@@ -8,7 +8,7 @@
       Regresar
     </button>
 
-    <div class="text-center mb-6">
+    <div class="text-center mb-6">  
       <h2 class="text-lg font-semibold">Empieza con tu nombre y tu mejor foto:</h2>
     </div>
 
@@ -28,25 +28,32 @@
         <label for="nombre" class="block text-sm font-medium text-gray-700">Nombre y apellidos</label>
         <input type="text" id="nombre" formControlName="nombre" required
           class="mt-1 p-2 block w-full border border-gray-300 rounded-md" />
-        <div *ngIf="profileForm.get('nombre')?.invalid && profileForm.get('nombre')?.touched"
-          class="text-red-600 text-sm">
-          Nombre es requerido
+          <div class="error">
+            <div *ngIf="profileForm.get('nombre')?.invalid && profileForm.get('nombre')?.touched"
+            class="text-red-600 text-sm">
+            <small>Nombre y apellidos es obligatorio</small>
+          </div>
         </div>
-      </div>
+          </div>
+
 
       <div>
         <label for="nickname" class="block text-sm font-medium text-gray-700">¿Cómo te gusta que te llamen?</label>
         <input type="text" id="nickname" formControlName="nickname" required
           class="mt-1 p-2 block w-full border border-gray-300 rounded-md" />
-        <div *ngIf="profileForm.get('nickname')?.invalid && profileForm.get('nickname')?.touched"
-          class="text-red-600 text-sm">
-          Nickname es requerido
+        <div class="error">
+            <div *ngIf="profileForm.get('nickname')?.invalid && profileForm.get('nickname')?.touched"
+            class="text-red-600 text-sm">
+            <small>Este campo es obligatorio</small>
+          </div>
         </div>
-      </div>
+        </div>
+
 
       <div class="text-center">
-        <button type="submit" [disabled]="profileForm.invalid"
-          class="w-full bg-pink text-white  py-2 rounded-lg hover:bg-pink-600 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:ring-opacity-50 ">
+        <!-- [disabled]="profileForm.invalid" -->
+        <button routerLink="/greeting" type="submit" 
+          class="w-full bg-pink text-white  py-2 rounded-lg hover:bg-pink-600 focus:outline-none focus:ring-2 focus:ring-pink focus:ring-opacity-50 ">
           ¡Listo!
         </button>
       </div>

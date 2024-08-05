@@ -1,11 +1,12 @@
 import { NgIf } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { Router, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-user-profile',
   standalone: true,
-  imports: [NgIf, ReactiveFormsModule],
+  imports: [NgIf, ReactiveFormsModule, RouterModule],
   templateUrl: './user-profile.component.html',
   styleUrl: './user-profile.component.css'
 })
@@ -13,7 +14,7 @@ export class UserProfileComponent {
   profileForm: FormGroup;
   photoUrl: string | ArrayBuffer | null = null;
 
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: FormBuilder, private router: Router) {
     this.profileForm = this.fb.group({
       nombre: ['', Validators.required],
       nickname: ['', Validators.required],
@@ -21,7 +22,7 @@ export class UserProfileComponent {
   }
 
   goBack() {
-    // Implementa la lógica para volver atrás
+    this.router.navigate(['/therapist'])
   }
 
   onPhotoSelected(event: Event) {

@@ -1,0 +1,57 @@
+<div class="min-h-screen flex items-center justify-center bg-gray-100">
+  <div class="bg-white p-6 rounded-lg shadow-md w-full max-w-md">
+    <h2 class="text-lg font-semibold mb-4">Ayúdame a completar la siguiente info para terminar de completar tu perfil:</h2>
+
+    <form [formGroup]="profileForm" (ngSubmit)="onSubmit()" class="space-y-4">
+      <div>
+        <label class="block text-sm font-medium text-gray-700">Sexo</label>
+        <div class="mt-1 flex items-center">
+          <label class="inline-flex items-center ">
+            <input type="radio" formControlName="sexo" value="Mujer" class="form-radio text-pink-500" />
+            <span class="ml-6 ">Mujer</span>
+          </label>
+          <label class="inline-flex items-center ml-4">
+            <input type="radio" formControlName="sexo" value="Hombre" class="form-radio text-pink-500" />
+            <span class="ml-2">Hombre</span>
+          </label>
+        </div>
+      </div>
+
+      <div>
+        <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+        <input type="email" id="email" formControlName="email" required class="mt-1 p-2 block w-full border border-gray-300 rounded-md" />
+      </div>
+
+      <div>
+        <label for="id" class="block text-sm font-medium text-gray-700">Número de identificación</label>
+        <input type="text" id="id" formControlName="id" required class="mt-1 p-2 block w-full border border-gray-300 rounded-md" />
+      </div>
+
+      <div>
+        <label for="eps" class="block text-sm font-medium text-gray-700">EPS</label>
+        <input type="text" id="eps" formControlName="eps" required class="mt-1 p-2 block w-full border border-gray-300 rounded-md" />
+      </div>
+
+      <div>
+        <label for="fechaNacimiento" class="block text-sm font-medium text-gray-700">Fecha de nacimiento</label>
+        <input type="text" id="fechaNacimiento" formControlName="fechaNacimiento" placeholder="DD/MM/AA" required class="mt-1 p-2 block w-full border border-gray-300 rounded-md" />
+      </div>
+
+      <div class="flex space-x-4">
+        <div class="w-1/2">
+          <label for="pais" class="block text-sm font-medium text-gray-700">País</label>
+          <input type="text" id="pais" formControlName="pais" required class="mt-1 p-2 block w-full border border-gray-300 rounded-md" />
+        </div>
+        <div class="w-1/2">
+          <label for="ciudad" class="block text-sm font-medium text-gray-700">Ciudad</label>
+          <input type="text" id="ciudad" formControlName="ciudad" required class="mt-1 p-2 block w-full border border-gray-300 rounded-md" />
+        </div>
+      </div>
+
+      <div class="text-center">
+        <!-- [disabled]="profileForm.invalid" -->
+        <button (click)="navigate()" type="submit" class="w-full bg-pink-500 text-white bg-pink hover:bg-pink-hover py-2 rounded-lg hover:bg-pink-600 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:ring-opacity-50">ENVIAR</button>
+      </div>
+    </form>
+  </div>
+</div>
