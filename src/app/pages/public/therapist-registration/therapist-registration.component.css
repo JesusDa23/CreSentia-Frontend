@@ -1,33 +1,111 @@
-.welcome{
-  height: 70vh;
-    background-image: linear-gradient(to bottom, #FFEDED, #FFFFFF);
-  background-size: cover;
-  background-attachment: fixed;
+.content {
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 20px; /* Añadido para espacio alrededor del contenido en pantallas más pequeñas */
 }
 
-.regresar{
-  border 2px solid
-  border-color: black;
+.btn-container {
+  position: absolute;
+  top: 2%; /* Ajustado en % para mejor adaptación a diferentes tamaños de pantalla */
+  left: 2%; /* Ajustado en % para mejor adaptación a diferentes tamaños de pantalla */
 }
 
-.btn-container{´
-  padding-top: 30px;
-  padding-left:80px ;
+/* Define la animación de rebote */
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
 }
 
-.btn-empezar{
-  background-color: #ED878F;
+.icon-animate {
+  display: inline-block;
+  animation: bounce 2s infinite; /* Ajusta el tiempo y la duración según lo necesites */
+}
+
+i.fa-solid.fa-heart.icon-animate {
+  color: #d1335D;
+}
+
+i.fa-solid.fa-arrow-left {
+  font-size: 1.2em;
+}
+
+.welcome {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%; /* Asegura que ocupe el ancho disponible */
+}
+
+.welcome p {
+  color: black; /* Color de texto oscuro para buen contraste con el fondo claro */
+  font-size: 1.5rem; /* Tamaño de fuente base con unidad relativa */
+  margin: 1rem 0; /* Espacio entre párrafos en unidades relativas */
+}
+
+.btn-empezar {
+  background-color: #d1335D;
+  color: #FFFFFF;
   border: none;
-  cursor:pointer ;
+  cursor: pointer;
+  padding: 0.5rem 1rem; /* Tamaño de padding en unidades relativas */
+  font-size: 1.25rem; /* Tamaño de fuente en unidades relativas */
+  margin: 1rem 0; /* Espacio entre botones en unidades relativas */
+  font-weight: 700;
 }
 
-.outer {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    margin-top: 90px;
+/* Estilos para pantallas más pequeñas */
+@media (max-width: 768px) {
+  .btn-container {
+    top: 1.5%; /* Ajustado para adaptarse a pantallas más pequeñas */
+    left: 1.5%;
+  }
+
+  .welcome {
+    padding: 1rem; /* Ajustado para adaptarse a pantallas más pequeñas */
+  }
+
+  .welcome p {
+    font-size: 1.25rem; /* Ajustado para mejor legibilidad en pantallas más pequeñas */
+    margin: 0.75rem 0;
+  }
+
+  .btn-empezar {
+    padding: 0.75rem 1.5rem; /* Ajustado para mejorar la apariencia en pantallas más pequeñas */
+    font-size: .8rem; /* Ajustado para mejor legibilidad en pantallas más pequeñas */
+  }
 }
 
-.inner {
-    text-align: center;
+/* Estilos para pantallas aún más pequeñas */
+@media (max-width: 480px) {
+  .btn-container {
+    top: 1%; /* Ajustado para adaptarse a pantallas muy pequeñas */
+    left: 1%;
+  }
+
+  .welcome {
+    padding: 0.5rem; /* Ajustado para adaptarse a pantallas muy pequeñas */
+  }
+
+  .welcome p {
+    font-size: 1rem; /* Ajustado para mejor legibilidad en pantallas muy pequeñas */
+    margin: 0.5rem 0;
+  }
+
+  .btn-empezar {
+    padding: 0.5rem 1rem; /* Ajustado para mejorar la apariencia en pantallas muy pequeñas */
+    font-size: 0.875rem; /* Ajustado para mejor legibilidad en pantallas muy pequeñas */
+  }
 }

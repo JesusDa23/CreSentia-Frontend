@@ -1,10 +1,19 @@
 <div class="register flex items-center justify-center bg-gray-100 h-screen">
-  <div class="text-center">
-    <h2 class="text-3xl font-bold mb-8">¿Cómo quieres comenzar?</h2>
-    <div class="flex flex-col space-y-4 md:flex-row md:space-y-0 md:space-x-4">
-      <button class="w-64 py-2 text-white bg-blue hover:bg-blue-hover rounded-lg shadow-md">Adulto</button>
-      <button class="w-64 py-2 text-white bg-green hover:bg-green-hover rounded-lg shadow-md">Familia</button>
-      <button class="w-64 py-2 text-white bg-pink hover:bg-pink-hover rounded-lg shadow-md">Terapeuta</button>
+    <div class="text-center bg-white p-8 rounded-lg shadow-xl border border-gray-300 max-w-lg w-full space-y-4">
+      <h2 class="text-3xl font-bold mb-8">¿Cómo quieres comenzar?</h2>
+      <div class="flex flex-col space-y-4 md:flex-row md:space-y-0 md:space-x-4">
+        <button routerLink="/adults" class="w-full md:w-64 py-2 text-white bg-blue rounded-lg shadow-lg hover:bg-blue-hover transition-transform transform-gpu hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 flex items-center justify-center space-x-2">
+          <i class="fas fa-user md:text-lg"></i>
+          <span>Adulto</span>
+        </button>
+        <button routerLink="/family" class="w-full md:w-64 py-3 text-white bg-green rounded-lg shadow-lg hover:bg-green-hover transition-transform transform-gpu hover:scale-105 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-50 flex items-center justify-center space-x-2">
+          <i class="fas fa-users md:text-lg"></i>
+          <span>Familia</span>
+        </button>
+        <button routerLink="/therapist" class="w-full md:w-64 py-2 text-white bg-pink rounded-lg shadow-lg hover:bg-pink-hover transition-transform transform-gpu hover:scale-105 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:ring-opacity-50 flex items-center justify-center space-x-2">
+          <i class="fas fa-user-md md:text-lg"></i>
+          <span>Terapeuta</span>
+        </button>
+      </div>
     </div>
   </div>
-</div>

@@ -1,5 +1,4 @@
 .home {
-  background-image: linear-gradient(to bottom, #FFEDED, #FFFFFF);
-  background-size: cover;
-  background-attachment: fixed; 
+  background: rgb(255,255,255);
+  background: linear-gradient(0deg, rgba(255,255,255,1) 14%, rgba(237,135,143,0.4730684510132178) 100%);
 }

@@ -3,13 +3,38 @@
     height: 70vh;
     margin: 0;
     overflow: hidden;
-    background-image: linear-gradient(to bottom, #FFEDED, #FFFFFF);
+    background-image: linear-gradient(to bottom right, #FFEDED, #FFFFFF); /* Gradiente diagonal para más dinamismo */
     background-size: cover;
     background-attachment: fixed; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .text-center {
     display: flex;
     flex-direction: column;
     align-items: center;
+    background: rgba(255, 255, 255, 0.9); /* Fondo blanco con menor opacidad para mayor contraste */
+    padding: 2rem; /* Añade padding para que el contenido no esté pegado a los bordes */
+    border-radius: 0.75rem; /* Bordes más redondeados para un estilo moderno */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* Sombra más pronunciada para mayor profundidad */
+    width: auto; /* Asegura que el contenedor tenga el ancho adecuado según el contenido */
+    max-width: none; /* Permite que el contenedor se expanda según el contenido */
+    border: 1px solid rgba(0, 0, 0, 0.1); /* Borde sutil alrededor del contenedor */
+}
+
+button {
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    padding: .5em 1em;
+}
+
+button:hover {
+    transform: scale(1.05); /* Aumenta el tamaño del botón ligeramente al pasar el ratón */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada en hover */
+}
+
+button:focus {
+    outline: none; /* Elimina el contorno predeterminado */
+    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.2); /* Efecto de enfoque más visible */
 }

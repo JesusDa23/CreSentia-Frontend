@@ -1,0 +1,11 @@
+/* .section1 {
+    background-image: linear-gradient(to bottom, #FFEDED, #FFFFFF);
+    background-size: cover;
+    background-attachment: fixed; 
+} */
+
+.bg-white.py-24.sm\:py-32.section1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

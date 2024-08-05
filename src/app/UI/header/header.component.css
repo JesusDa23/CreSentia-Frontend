@@ -1,3 +1,8 @@
+.nav-shadow {
+    box-shadow: 0 4px 10px -4px rgb(255 91 91 / 80%);
+}
+
+
 /* Puedes ajustar esto según tus necesidades */
 #mobile-menu-2 {
     display: none; /* Por defecto oculto en dispositivos móviles */
@@ -6,3 +11,4 @@
 #mobile-menu-2.block {
     display: block; /* Mostrar cuando el menú está abierto */
 }
+
