@@ -5,6 +5,7 @@ import { AdultsRegistrationComponent } from './pages/public/adults-registration/
 import { FamilyRegistrationComponent } from './pages/public/family-registration/family-registration.component';
 import { TherapistRegistrationComponent } from './pages/public/therapist-registration/therapist-registration.component';
 import { RegisterComponent } from './pages/public/register/register.component';
+import { UserProfileComponent } from './pages/public/user-profile/user-profile.component';
 
 export const routes: Routes = [
     {path:'', component: HomeComponent},
@@ -12,5 +13,6 @@ export const routes: Routes = [
     {path: 'register', component:RegisterComponent},
     {path:'adults', component: AdultsRegistrationComponent},
     {path:'family', component:FamilyRegistrationComponent},
-    {path:'therapist', component: TherapistRegistrationComponent}
+    {path:'therapist', component: TherapistRegistrationComponent},
+    {path:'user-profile', component: UserProfileComponent}
 ];

@@ -1,0 +1,55 @@
+<div class="min-h-screen flex items-center justify-center bg-gray-100">
+  <div class="bg-white p-6 rounded-lg shadow-md w-full max-w-sm">
+    <button class="mb-4 text-gray-500 hover:text-gray-800" (click)="goBack()">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 inline-block" fill="none" viewBox="0 0 24 24"
+        stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+      </svg>
+      Regresar
+    </button>
+
+    <div class="text-center mb-6">
+      <h2 class="text-lg font-semibold">Empieza con tu nombre y tu mejor foto:</h2>
+    </div>
+
+    <div class="flex justify-center mb-4">
+      <div class="relative">
+        <div class="h-24 w-24 bg-gray-200 rounded-full flex items-center justify-center">
+          <img *ngIf="photoUrl" [src]="photoUrl" alt="Foto" class="rounded-full object-cover h-24 w-24" />
+          <span *ngIf="!photoUrl" class="text-gray-400">+</span>
+        </div>
+        <input type="file" class="absolute top-0 left-0 w-full h-full opacity-0 cursor-pointer"
+          (change)="onPhotoSelected($event)" />
+      </div>
+    </div>
+
+    <forsm [formGroup]="profileForm" (ngSubmit)="onSubmit()" class="space-y-4">
+      <div>
+        <label for="nombre" class="block text-sm font-medium text-gray-700">Nombre y apellidos</label>
+        <input type="text" id="nombre" formControlName="nombre" required
+          class="mt-1 p-2 block w-full border border-gray-300 rounded-md" />
+        <div *ngIf="profileForm.get('nombre')?.invalid && profileForm.get('nombre')?.touched"
+          class="text-red-600 text-sm">
+          Nombre es requerido
+        </div>
+      </div>
+
+      <div>
+        <label for="nickname" class="block text-sm font-medium text-gray-700">¿Cómo te gusta que te llamen?</label>
+        <input type="text" id="nickname" formControlName="nickname" required
+          class="mt-1 p-2 block w-full border border-gray-300 rounded-md" />
+        <div *ngIf="profileForm.get('nickname')?.invalid && profileForm.get('nickname')?.touched"
+          class="text-red-600 text-sm">
+          Nickname es requerido
+        </div>
+      </div>
+
+      <div class="text-center">
+        <button type="submit" [disabled]="profileForm.invalid"
+          class="w-full bg-pink text-white  py-2 rounded-lg hover:bg-pink-600 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:ring-opacity-50 ">
+          ¡Listo!
+        </button>
+      </div>
+    </forsm>
+  </div>
+</div>
